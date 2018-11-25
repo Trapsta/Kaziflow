@@ -23,7 +23,14 @@ class AddReview extends Component {
 			      type="text"
 			      label="Company Name"
 			      placeholder="Enter text"
-			    />	   
+			    />	
+
+			    <FieldGroup
+			      id="formControlsPosition"
+			      type="text"
+			      label="Job Title"
+			      placeholder="Marketing Manager"
+			    />   
 			    
 
 			    <Checkbox checked readOnly>
