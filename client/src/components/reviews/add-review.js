@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
-import { FormGroup, FormControl, ControlLabel, Checkbox, Radio, HelpBlock, Button } from 'react-bootstrap';
+import { FormGroup, FormControl, ControlLabel, Checkbox, Button } from 'react-bootstrap';
 import FieldGroup from '../shared/field-group';
+import PropTypes from 'prop-types';
 
 
 class AddReview extends Component {
@@ -72,6 +73,11 @@ class AddReview extends Component {
 
 }
 
+AddReview.propTypes = {
+  // onClick: PropTypes.func.isRequired,
+  // completed: PropTypes.bool.isRequired,
+  // text: PropTypes.string.isRequired
+}
 
 
 

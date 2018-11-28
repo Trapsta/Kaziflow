@@ -15,8 +15,9 @@ class Interview extends Component {
 	render() {
 
 		const interview = this.props.interview;
-		const interviewQuestions = this.props.interview.questions;
-		const questions = interviewQuestions.map(question => <li> {question.question} </li>);
+		console.log(interview);
+		const interviewQuestions = interview['questions'];
+		const questions = interviewQuestions.map((question, i) => <li key={i}> {question.question} </li>);
 		
 		  return (
 		  		<div className="interview-container">
@@ -28,9 +29,9 @@ class Interview extends Component {
 
 
 				    <Panel.Body>
-				    	<p> Job Type: { interview.jobType } </p>
+				    	<p> Job Type: { interview.employmentType == 1 ? 'Full-Time Position' : interview.employmentType == 2 ? 'Part-Time Position' : 'Internship' } </p>
 				    	<h4>Interview Process</h4>
-				    	<p> { interview.interview } </p>
+				    	<p> { interview.description } </p>
 				    	<h4>Interview Questions</h4>
 				    	<ol>
 				    		{ questions }
